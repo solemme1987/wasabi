@@ -1,0 +1,35 @@
+@if ($debug) {
+  html {
+    &::after {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 999999999;
+      display: block;
+      padding: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+      content: 'base';
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 0 0.5rem 0 0;
+
+      @media (min-width: 30em) {
+        content: "xs / 30em";
+      }
+
+      @media (min-width: 48em) {
+        content: "sm / 48em";
+      }
+
+      @media (min-width: 62em) {
+        content: "md / 62em";
+      }
+
+      @media (min-width: 80em) {
+        content: "lg / 80em";
+      }
+    }
+  }
+}

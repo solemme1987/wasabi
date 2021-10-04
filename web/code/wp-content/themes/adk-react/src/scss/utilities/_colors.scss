@@ -1,0 +1,13 @@
+/*
+* Generating utility classes based on the colors, mainly for the slant CTA
+*/
+
+@each $name, $val in $colors {
+  .u-color-#{$name} {
+    color: $val;
+  }
+
+  .u-bg-#{$name} {
+    background-color: $val;
+  }
+}

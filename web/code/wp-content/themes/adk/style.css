@@ -1,0 +1,22 @@
+/*
+Theme Name: adk
+Theme URI:
+Author: The ADK Group
+Author URI:
+Description: A custom WordPress theme.
+Version: 2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:
+Tags:
+*/
+
+/*
+Do not write your CSS in this file!
+
+This file is NOT enqueued.
+
+Write your css in the appropriate directory and use webpack scripts.
+
+SCSS files -> ./src/scss
+*/

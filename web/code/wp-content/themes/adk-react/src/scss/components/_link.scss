@@ -1,0 +1,13 @@
+.c-link {
+  font-size: 1.6rem;
+
+  &--primary {
+    font-weight: 700;
+    color: color(blue);
+  }
+
+  &--arrow {
+    font-weight: 500;
+    color: color(blue);
+  }
+}

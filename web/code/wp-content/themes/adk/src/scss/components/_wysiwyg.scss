@@ -1,0 +1,53 @@
+.c-wysiwyg {
+  margin-top: 1.2rem;
+  color: color(black);
+
+  p {
+    margin-bottom: 3rem;
+    font: 400 1.7rem/1.5 inherit;
+    letter-spacing: 0.01rem;
+  }
+
+  h1 {
+    @extend .c-heading;
+    @extend .c-heading--l1;
+  }
+
+  h2 {
+    @extend .c-heading;
+    @extend .c-heading--l2;
+
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+  }
+
+  h3 {
+    @extend .c-heading;
+    @extend .c-heading--l3;
+
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  h4 {
+    @extend .c-heading;
+    @extend .c-heading--l4;
+
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  h5 {
+    @extend .c-heading;
+    @extend .c-heading--l5;
+
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  h6 {
+    margin: 2rem 0;
+    font-weight: 300;
+  }
+}

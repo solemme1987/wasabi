@@ -1,0 +1,46 @@
+.c-heading {
+  font-family: 'Arial', sans-serif; // custom font variable
+  font-weight: 600;
+
+  &--l1 {
+    font-size: 4.2rem;
+    line-height: 1.15;
+
+    @include iota-breakpoint(md) {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+  }
+
+  &--l2 {
+    font-size: 3.2rem;
+    line-height: 1.15;
+
+    @include iota-breakpoint(md) {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+  }
+
+  &--l3 {
+    font-size: 2.6rem;
+    line-height: 1.15;
+
+    @include iota-breakpoint(md) {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+  }
+
+  &--l4 {
+    font-size: 2.2rem;
+    line-height: 1.27;
+  }
+
+  &--l5 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1.33;
+    letter-spacing: 0.075rem;
+  }
+}

@@ -1,0 +1,61 @@
+image: atlassian/default-image:2
+
+definitions:
+    steps:
+        - step: &bootstrap
+            name: Install Build Tools
+            script:
+                - git clone --branch v1.1.0 https://$ADK_DEPLOYMENT_USER:$ADK_DEPLOYMENT_KEY@bitbucket.org/adkgroup/buildtools.git
+                - mv buildtools/tmp-deploy ./
+            artifacts:
+                - tmp-deploy/**
+
+        - step: &build
+            name: Build
+            script:
+                - source ./tmp-deploy/reactjs/install-tooling.sh    # default node should be 10.15.3
+
+                - source ./tmp-deploy/reactjs/environment-setup.sh
+                - source ./tmp-deploy/cmsrsync/build.sh
+            artifacts:
+                - dist/**
+
+        - step: &deploy
+            name: Deploy
+            script:
+                - source ./tmp-deploy/cmsrsync/validate-deploy-vars.sh
+                
+                - source ./tmp-deploy/cmsrsync/deploy.sh
+
+pipelines:
+    custom:
+
+        dev: &dev
+            - step: *bootstrap
+            - step: 
+                <<: *build
+                deployment: dev-build
+            - step:
+                <<: *deploy
+                deployment: dev-deploy
+
+        staging:
+            - step: *bootstrap
+            - step: 
+                <<: *build
+                deployment: staging-build
+            - step:
+                <<: *deploy
+                deployment: staging-deploy
+
+        production:
+            - step: *bootstrap
+            - step: 
+                <<: *build
+                deployment: production-build
+            - step:
+                <<: *deploy
+                deployment: production-deploy
+
+    branches:
+        demo: *dev

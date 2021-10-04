@@ -1,0 +1,48 @@
+version: '3.7'
+services:
+  mysql:
+    build: ./mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql/mounted/backups/:/adk/backups
+      - ./mysql/mounted/logs:/var/log/mysql
+    secrets:
+      - host_ssh_key
+    environment:
+      - LOCALHOST=mysql
+      - MYSQL_DATABASE=adksite
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=pass
+  web:
+    build: ./web
+    volumes:
+      - ./web/code/wp-content:/var/www/html/wp-content
+      - ./web/code/config/remote.site.yml:/opt/remote.site.yml
+    secrets:
+      - host_ssh_key
+    depends_on:
+      - mysql
+    ports:
+      - 8000:80
+    environment:
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_NAME=adksite
+      - WORDPRESS_DB_USER=admin
+      - WORDPRESS_DB_PASSWORD=password
+      - WORDPRESS_DEBUG=1
+      - WORDPRESS_CONFIG_EXTRA=
+        define('WP_HOME', 'http://localhost:8000/');
+        define('WP_SITEURL', 'http://localhost:8000/');
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+     - 8888:80
+    volumes:
+     - /sessions
+    environment:
+      PMA_HOST: mysql
+secrets:
+  host_ssh_key:
+    file: ~/.ssh/id_rsa

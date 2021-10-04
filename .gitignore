@@ -1,0 +1,14 @@
+
+mysql/mounted
+
+envfile.production.txt
+envfile.staging.txt
+envfile.txt
+
+web/code/wp-content/uploads
+web/code/wp-content/plugins
+web/code/wp-content/plugins/akismet
+web/code/wp-content/themes/twenty*/
+
+.DS_Store
+.vscode

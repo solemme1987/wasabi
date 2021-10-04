@@ -1,0 +1,14 @@
+config/
+wp-content/cache/**/*
+wp-content/plugins
+wp-content/uploads
+wp-content/upgrade
+wp-content/themes/**/config
+wp-content/themes/**/src
+wp-content/advanced-cache.php
+wp-content/object-cache.php
+**/node_modules
+wp-content/mu-iwp-client.php
+wp-content/w3tc-config
+wp-content/db.php
+wp-content/infinitewp

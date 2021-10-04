@@ -1,0 +1,7 @@
+# File: remote.site.yml
+# Replace the folling with project specific
+dev:
+  host: adkalpha.com
+  user: alpha
+  root: /var/www/vhosts/adkalpha.com/staging/wp-demo
+  alias: alpha-site

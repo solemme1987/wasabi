@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": ["standard", "plugin:react/recommended"],
+  "plugins": ["react", "simple-import-sort"],
+  "globals": {
+    "Drupal": false
+  },
+  "rules": {
+    "jsx-a11y/href-no-hash": "off",
+    "react/jsx-uses-react": 1,
+    "react/react-in-jsx-scope": 1,
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "import/no-unresolved": [2, { "ignore": ["^@/"] }],
+    "react/prop-types": 0
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+        "version": "detect"
+    }
+  }
+}

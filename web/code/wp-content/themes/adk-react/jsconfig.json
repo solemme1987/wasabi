@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/js/react/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

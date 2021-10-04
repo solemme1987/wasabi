@@ -1,0 +1,32 @@
+/*
+* Iota initialize base
+* Initialize is a modern, elegant and minimal combination of
+* Normalize.css and CSS Reset. Compatible with IE10+
+* https://www.iotacss.com/docs/base/initialize/
+*/
+
+$iota-base-initialize-box-sizing: 'border-box';
+$iota-base-initialize-heading-size: true;
+$iota-base-initialize-form-elements: true;
+$iota-base-initialize-html5-form-elements: true;
+
+@import 'node_modules/iotacss/base/initialize';
+
+/*
+* Additional ADK preferences
+*/
+html {
+  height: 100%;
+  // A font-size of 62.5% will create a base font-size of 10px in most cases
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  font: 400 1.6rem/1.2 'Arial', sans-serif;
+  color: color(red);
+}
+
+img {
+  display: block;
+}

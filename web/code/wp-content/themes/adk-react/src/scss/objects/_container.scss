@@ -1,0 +1,26 @@
+/*
+* Iota's container object
+* https://www.iotacss.com/docs/objects/container/
+*/
+
+$iota-objs-container-namespace: 'container';
+$iota-objs-container-gutter-default: (
+  null: 1rem,
+  sm: 2.5rem,
+  md: 5rem,
+  xl: 10rem,
+  xxl: 15rem
+);
+$iota-objs-container-gutter-extra: (
+  small: (
+    null: 0,
+    sm: 5rem,
+    md: 10rem,
+    lg: 15rem,
+    xxl: 25rem
+  )
+);
+$iota-objs-container-size-default: 100%;
+$iota-objs-container-size-extra: null;
+
+@import 'node_modules/iotacss/objects/container';

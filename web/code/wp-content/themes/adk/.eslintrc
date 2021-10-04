@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": ["standard"],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "import/no-unresolved": [2, { "ignore": ["^@/"] }]
+  }
+}

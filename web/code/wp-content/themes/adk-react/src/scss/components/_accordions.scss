@@ -1,0 +1,51 @@
+/**
+ * Accordion Component
+ */
+
+.c-accordion {
+
+  [aria-hidden="true"] { display: none; }
+
+  &__controls { list-style: none; }
+
+  &__button {
+    -webkit-appearance: none;
+    background-color: color(black);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2.2rem 1rem 1.8rem;
+    position: relative;
+    text-align: left;
+    width: 100%;
+
+    @include iota-breakpoint(md) {
+      flex-direction: row;
+      padding: 1.4rem 3.2rem;
+    }
+
+    &[aria-expanded="true"] {
+      background-color: color(blue);
+      box-shadow: none;
+      color: color(grey);
+
+      &::after {
+        height: 0.6rem;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 1.6rem;
+      position: absolute;
+      right: 1.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.6rem;
+    }
+
+    span { pointer-events: none; }
+  }
+}

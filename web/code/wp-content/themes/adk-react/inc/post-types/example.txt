@@ -1,0 +1,27 @@
+- Clone this file and name it as -> your-post-type-name.json
+- Replace values as needed
+- For a list of available menu icons visit https://developer.wordpress.org/resource/dashicons/
+*** Delete this and above lines ***
+
+{
+  "capability_type": "post",
+  "labels": {
+    "name": "Team Members",
+    "singular_name": "Team Member"
+  },
+  "menu_icon": "dashicons-universal-access",
+  "menu_position": 5,
+  "publicly_queryable": true,
+  "public": true,
+  "show_ui": true,
+  "show_in_menu": true,
+  "supports": [
+    "title",
+    "slug",
+    "thumbnail",
+    "editor"
+  ],
+  "taxonomies": [
+    "role"
+  ]
+}

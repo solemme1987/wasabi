@@ -1,0 +1,81 @@
+.c-btn {
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+  border-radius: 2.5rem;
+  font-weight: 700;
+  transition: 0.3s ease all;
+
+  &--primary {
+    font-size: 2rem;
+    padding: 1.2rem 3rem;
+    min-width: 17rem;
+  }
+
+  &--small {
+    min-width: 12rem;
+    font-size: 1.6rem;
+    padding: 1.1rem;
+  }
+
+  &--disabled {
+    color: color(white);
+    background: color(grey);
+    border: 0.1rem solid color(grey);
+    cursor: default;
+  }
+
+  &--white {
+    background: color(white);
+    color: color(blue);
+    border: 0.1rem solid color(white);
+
+    &:hover {
+      background: color(blue);
+      color: color(white);
+      border-color: color(blue);
+    }
+  }
+
+  &--blue {
+    background: color(blue);
+    color: color(white);
+    border: 0.1rem solid color(blue);
+
+    &:hover {
+      background: color(white);
+      color: color(blue);
+      border-color: color(grey);
+    }
+  }
+
+  &--red {
+    background: color(red);
+    color: color(white);
+    border: 0.1rem solid color(red);
+
+    &:hover {
+      background: color(white);
+      color: color(red);
+      border-color: color(grey);
+    }
+  }
+
+  &--border {
+    border: 0.1rem solid color(grey);
+  }
+
+  &--shadow {
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 33, 45, 0.15);
+  }
+
+  // mobile full
+  &--full {
+    width: 100%;
+
+    @include iota-breakpoint(md) {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+clone this file and name it as -> your-taxonomy-name.json
+- Replace values as needed
+*** Delete this and above lines ***
+
+{
+  "labels": {
+    "name": "Roles",
+    "singular_name": "Role"
+  },
+  "hierarchical": true,
+  "show_ui": true,
+  "show_admin_column": true,
+  "post_types": [
+    "team-members"
+  ]
+}
