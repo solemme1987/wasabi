@@ -18,9 +18,16 @@ $iota-objs-container-gutter-extra: (
     md: 10rem,
     lg: 15rem,
     xxl: 25rem
+  ),
+  std: (
+    null: 0,
   )
 );
 $iota-objs-container-size-default: 100%;
-$iota-objs-container-size-extra: null;
+$iota-objs-container-size-extra: (
+  std: (
+    sm: 122.5rem,
+  )
+);
 
 @import 'node_modules/iotacss/objects/container';

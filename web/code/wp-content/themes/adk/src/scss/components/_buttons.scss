@@ -22,11 +22,13 @@
   &--disabled {
     color: color(white);
     cursor: default;
-    background: color(grey);
-    border: 0.1rem solid color(grey);
+
+    /*  background: color(grey); */
+
+    /*  border: 0.1rem solid color(grey); */
   }
 
-  &--white {
+  /* &--white {
     color: color(blue);
     background: color(white);
     border: 0.1rem solid color(white);
@@ -36,9 +38,9 @@
       background: color(blue);
       border-color: color(blue);
     }
-  }
+  } */
 
-  &--blue {
+  /*   &--blue {
     color: color(white);
     background: color(blue);
     border: 0.1rem solid color(blue);
@@ -46,11 +48,12 @@
     &:hover {
       color: color(blue);
       background: color(white);
+
       border-color: color(grey);
     }
-  }
+  } */
 
-  &--red {
+  /*   &--red {
     color: color(white);
     background: color(red);
     border: 0.1rem solid color(red);
@@ -60,10 +63,10 @@
       background: color(white);
       border-color: color(grey);
     }
-  }
+  } */
 
   &--border {
-    border: 0.1rem solid color(grey);
+    /*   border: 0.1rem solid color(grey); */
   }
 
   &--shadow {

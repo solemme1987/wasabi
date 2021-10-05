@@ -28,7 +28,7 @@ $iota-utils-padding-extra                : (
   )
 );
 
-$iota-utils-padding-res                  : false;
+$iota-utils-padding-res                  : true;
 $iota-utils-padding-breakpoints          : $iota-global-breakpoints;
 
 @import 'node_modules/iotacss/utilities/padding';

@@ -26,8 +26,9 @@
     }
 
     &[aria-expanded="true"] {
-      color: color(grey);
-      background-color: color(blue);
+      /*   color: color(grey); */
+
+      /*  background-color: color(blue); */
       box-shadow: none;
 
       &::after {
