@@ -1,0 +1,81 @@
+.c-styleguide {
+  padding-bottom: 6rem;
+
+  &__title {
+    margin-top: 4rem;
+    font-family: $Open-sans;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 5.2rem;
+    color: color(black);
+    letter-spacing: -0.07rem;
+  }
+
+  &__subtitle {
+    margin-top: 3.2rem;
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 4rem;
+    color: color(black);
+    letter-spacing: -0.075rem;
+  }
+
+  &__card {
+    width: 100%;
+    min-height: 20.2rem;
+    padding-bottom: 0.8rem;
+    margin-top: 3.2rem;
+    background-color: color(white);
+    border: 0.1rem solid color(border-gray);
+  }
+
+  &__card-body {
+    width: inherit;
+    height: 20rem;
+    border-bottom: 0.1rem solid color(border-gray);
+    &--black {
+      background-color: color(black);
+    }
+    &--green {
+      background-color: color(green);
+    }
+    &--dark-blue {
+      background-color: color(dark-blue);
+    }
+    &--primary-blue {
+      background-color: color(primary-blue);
+    }
+    &--light-blue {
+      background-color: color(light-blue);
+    }
+    &--dark-gray {
+      background-color: color(dark-gray);
+    }
+    &--base-gray {
+      background-color: color(base-gray);
+    }
+    &--gradient {
+      background: linear-gradient(135deg, color(gradient-dark) 0%, color(gradient-light) 100%);
+    }
+  }
+
+  &__card-title {
+    margin-top: 0.7rem;
+    margin-left: 0.9rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: color(black);
+    letter-spacing: 0;
+  }
+
+  &__card-hexa,
+  &__card-rgba {
+    margin-top: 1rem;
+    margin-left: 0.9rem;
+    font-size: 1.3rem;
+    line-height: 1rem;
+    color: color(gray);
+    letter-spacing: 0;
+  }
+}

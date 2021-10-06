@@ -9,11 +9,15 @@ $colors: (
   black: #111,
   base-gray: #efefef,
   light-gray: #f8f8f8,
+  gray: #8a8a8a,
   dark-gray:#e3e3e3,
+  border-gray: #e4e4e4,
   primary-blue: #054a91,
   light-blue: #0064e9,
   dark-blue: #061f32,
-  green: #36b32f
+  green: #36b32f,
+  gradient-dark: #03101b,
+  gradient-light: #003a68,
 );
 
 @function color($key) {
